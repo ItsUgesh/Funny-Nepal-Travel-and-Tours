@@ -1,0 +1,106 @@
+// Mixin
+
+@mixin transform($rotate_all) {
+  -webkit-transform: ($rotate_all);
+  -ms-transform: ($rotate_all);
+  -moz-transform: ($rotate_all);
+  -o-transform: ($rotate_all);
+  transform: ($rotate_all);
+}
+
+@mixin transition($rotate) {
+  -webkit-transition: ($rotate);
+  -ms-transition: ($rotate);
+  -moz-transition: ($rotate);
+  -o-transition: ($rotate);
+  transition: ($rotate);
+}
+
+@mixin transform-origin($rotate_origin) {
+  -webkit-transform-origin: ($rotate_origin);
+  -ms-transform-origin: ($rotate_origin);
+  -moz-transform-origin: ($rotate_origin);
+  -o-transform-origin: ($rotate_origin);
+  transform-origin: ($rotate_origin);
+}
+
+@mixin transition-delay($rotate_sec) {
+  -webkit-transform-origin: ($rotate_sec);
+  -ms-transform-origin: ($rotate_sec);
+  -moz-transform-origin: ($rotate_sec);
+  -o-transform-origin: ($rotate_sec);
+  transform-origin: ($rotate_sec);
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// Mixin for responsive breakpoints, based on bootstrap 4
+
+@mixin only-for-mobile {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin mobile-and-above {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin only-for-tablet {
+  @media (min-width: 576px) and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin tablet-and-above {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin tablet-and-below {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin only-for-laptop {
+  @media (min-width: 768px) and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin laptop-and-above {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin laptop-and-below {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin only-for-large-devices {
+  @media (min-width: 992px) and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin large-devices-and-above {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin large-devices-and-below {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
